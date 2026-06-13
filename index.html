@@ -27,21 +27,23 @@
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.92);
-      border-bottom: 1px solid rgba(255, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.93);
+      border-bottom: 1px solid rgba(255, 0, 0, 0.45);
     }
 
     .nav {
       max-width: 1200px;
       margin: auto;
-      padding: 14px 22px;
+      padding: 12px 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .nav img {
-      height: 58px;
+    .nav-logo {
+      height: 54px;
+      width: auto;
+      display: block;
     }
 
     nav a {
@@ -51,21 +53,22 @@
       font-weight: 900;
       text-transform: uppercase;
       font-size: 14px;
+      letter-spacing: 0.4px;
     }
 
     nav a:hover {
-      color: #e00000;
+      color: #ff2400;
     }
 
     .hero {
       min-height: 100vh;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.92)),
-        url("hintergrund.png") center center / cover no-repeat;
+        linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0.88)),
+        url("Hintergrund.png") center center / cover no-repeat;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding: 120px 20px 70px;
+      padding: 125px 20px 75px;
       text-align: center;
     }
 
@@ -75,33 +78,33 @@
     }
 
     .hero-logo {
-      max-width: 430px;
-      width: 90%;
-      margin-bottom: 30px;
-      filter: drop-shadow(0 0 20px rgba(0,0,0,0.9));
+      max-width: 360px;
+      width: 82%;
+      margin-bottom: 26px;
+      filter: drop-shadow(0 0 18px rgba(0,0,0,0.9));
     }
 
     .hero h1 {
-      font-size: clamp(42px, 8vw, 96px);
+      font-size: clamp(46px, 8vw, 92px);
       line-height: 0.95;
       text-transform: uppercase;
       font-weight: 1000;
       letter-spacing: 2px;
-      text-shadow: 0 0 20px #000;
+      text-shadow: 0 0 24px #000;
     }
 
     .hero h1 span {
-      color: #d50000;
+      color: #ff2400;
       display: block;
-      font-size: 1.12em;
     }
 
     .hero p {
-      margin: 25px auto 35px;
-      max-width: 780px;
-      font-size: 22px;
-      color: #eeeeee;
-      text-shadow: 0 0 12px #000;
+      margin: 24px auto 35px;
+      max-width: 760px;
+      font-size: 21px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 0 15px #000;
     }
 
     .buttons {
@@ -113,18 +116,19 @@
 
     .btn {
       padding: 16px 30px;
-      border-radius: 7px;
+      border-radius: 8px;
       font-weight: 900;
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
-      border: 1px solid rgba(255,255,255,0.18);
-      min-width: 210px;
+      border: 1px solid rgba(255,255,255,0.2);
+      min-width: 220px;
       transition: 0.2s;
+      text-align: center;
     }
 
     .btn-red {
-      background: linear-gradient(180deg, #e00000, #840000);
+      background: linear-gradient(180deg, #ff2400, #990000);
     }
 
     .btn-dark {
@@ -133,90 +137,101 @@
 
     .btn:hover {
       transform: scale(1.04);
-      box-shadow: 0 0 22px rgba(255,0,0,0.45);
+      box-shadow: 0 0 22px rgba(255,0,0,0.5);
     }
 
     section {
       max-width: 1150px;
       margin: auto;
-      padding: 75px 22px;
+      padding: 70px 22px;
     }
 
     h2 {
-      font-size: 42px;
+      font-size: 40px;
       text-transform: uppercase;
       margin-bottom: 28px;
-      border-left: 7px solid #d50000;
+      border-left: 7px solid #ff2400;
       padding-left: 16px;
       line-height: 1;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
     .card {
-      background: linear-gradient(180deg, #161616, #080808);
-      border: 1px solid #2b2b2b;
+      background: linear-gradient(180deg, rgba(30,30,30,0.96), rgba(8,8,8,0.96));
+      border: 1px solid rgba(255,255,255,0.14);
       border-radius: 16px;
-      padding: 30px;
+      padding: 28px 22px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.45);
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
     }
 
     .card h3 {
       color: #ffffff;
-      font-size: 25px;
+      font-size: 22px;
+      line-height: 1.1;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      word-break: normal;
+      hyphens: auto;
     }
 
     .card h3 span {
-      color: #e00000;
+      color: #ff2400;
       display: block;
+      margin-top: 4px;
     }
 
     .card p {
-      color: #dddddd;
-      font-size: 17px;
+      color: #eeeeee;
+      font-size: 15.5px;
+      line-height: 1.35;
+      font-weight: 600;
     }
 
     .about {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 40px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: stretch;
     }
 
     .about-box {
-      background: linear-gradient(180deg, #151515, #070707);
-      border: 1px solid #292929;
+      background: linear-gradient(180deg, rgba(25,25,25,0.96), rgba(8,8,8,0.96));
+      border: 1px solid rgba(255,255,255,0.14);
       border-radius: 16px;
       padding: 34px;
     }
 
     .about-box p {
       font-size: 18px;
-      color: #e8e8e8;
-      margin-bottom: 15px;
+      color: #eeeeee;
+      margin-bottom: 16px;
+      font-weight: 600;
     }
 
     .name {
-      color: #e00000;
+      color: #ff2400;
       font-size: 34px;
       font-style: italic;
-      margin-top: 10px;
+      font-weight: 900;
+      margin-top: 12px;
     }
 
     .theorie {
       background:
-        linear-gradient(90deg, rgba(10,10,10,0.95), rgba(45,0,0,0.95)),
-        radial-gradient(circle at left, #500000, #050505);
-      border: 1px solid #2d2d2d;
+        linear-gradient(90deg, rgba(15,15,15,0.96), rgba(75,0,0,0.96));
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 18px;
-      padding: 45px;
+      padding: 42px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -227,20 +242,28 @@
     .theorie h3 {
       font-size: 34px;
       text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .theorie p {
-      color: #ddd;
+      color: #eeeeee;
       font-size: 18px;
-      max-width: 600px;
+      max-width: 620px;
+      font-weight: 600;
     }
 
     .kontakt-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
       border-top: 1px solid #222;
-      padding-top: 40px;
+      padding-top: 38px;
+    }
+
+    .kontakt-grid p {
+      font-size: 17px;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
     .kontakt-grid a {
@@ -249,7 +272,7 @@
     }
 
     .kontakt-grid a:hover {
-      color: #e00000;
+      color: #ff2400;
     }
 
     footer {
@@ -262,22 +285,32 @@
     .slogan {
       background: linear-gradient(90deg, transparent, #b00000, transparent);
       padding: 20px;
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 900;
       font-style: italic;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
       .nav {
         display: block;
         text-align: center;
       }
 
-      .nav img {
+      .nav-logo {
         height: 48px;
-        margin-bottom: 10px;
+        margin: 0 auto 10px;
       }
 
       nav a {
@@ -287,24 +320,27 @@
       }
 
       .hero {
-        background-position: center top;
         padding-top: 150px;
       }
 
       .hero p {
-        font-size: 18px;
+        font-size: 17px;
       }
 
-      .about {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .kontakt-grid {
         grid-template-columns: 1fr;
       }
 
       h2 {
-        font-size: 32px;
+        font-size: 31px;
       }
 
       .slogan {
-        font-size: 22px;
+        font-size: 21px;
       }
     }
   </style>
@@ -315,14 +351,13 @@
 <header>
   <div class="nav">
     <a href="#start">
-      <img src="logo.png" alt="Fahrlehrer Klartext Logo">
+      <img class="nav-logo" src="logo.png" alt="Fahrlehrer Klartext Logo">
     </a>
 
     <nav>
       <a href="#start">Start</a>
       <a href="#ueber">Über mich</a>
       <a href="#content">Content</a>
-      <a href="#theoriex">Theorie X</a>
       <a href="#kontakt">Kontakt</a>
       <a href="#impressum">Impressum</a>
     </nav>
@@ -341,8 +376,7 @@
       </h1>
 
       <p>
-        Ehrlich. Direkt. Auf den Punkt.  
-        Fahrpraxis, Prüfungsfehler, Verkehrszeichen und Theorie verständlich erklärt.
+        Ehrlich. Direkt. Auf den Punkt. Fahrpraxis, Prüfungsfehler, Verkehrszeichen und Theorie verständlich erklärt.
       </p>
 
       <div class="buttons">
@@ -381,25 +415,15 @@
     <div class="about">
       <div class="about-box">
         <h2>Über mich</h2>
-        <p>
-          Ich bin Sven Gutknecht, Fahrlehrer aus Munster.
-        </p>
-        <p>
-          Auf meinen Kanälen erkläre ich Fahrschul-Themen so, wie sie wirklich verstanden werden müssen:
-          klar, direkt und praxisnah.
-        </p>
-        <p>
-          Es geht um Sitzposition, Lenkradhaltung, Blickführung, Schulterblick, Vorfahrt,
-          Verkehrszeichen, Prüfungsfehler und alles, was Fahrschüler wirklich weiterbringt.
-        </p>
+        <p>Ich bin Sven Gutknecht, Fahrlehrer aus Munster.</p>
+        <p>Auf meinen Kanälen erkläre ich Fahrschul-Themen so, wie sie wirklich verstanden werden müssen: klar, direkt und praxisnah.</p>
+        <p>Es geht um Sitzposition, Lenkradhaltung, Blickführung, Schulterblick, Vorfahrt, Verkehrszeichen, Prüfungsfehler und alles, was Fahrschüler wirklich weiterbringt.</p>
         <div class="name">Sven Gutknecht</div>
       </div>
 
       <div class="card">
         <h3>Kein Gequatsche <span>nur Klartext</span></h3>
-        <p>
-          Für Fahranfänger, Fahrschüler und alle, die Verkehrsregeln endlich wirklich verstehen wollen.
-        </p>
+        <p>Für Fahranfänger, Fahrschüler und alle, die Verkehrsregeln endlich wirklich verstehen wollen.</p>
       </div>
     </div>
   </section>
@@ -408,9 +432,7 @@
     <div class="theorie">
       <div>
         <h3>Theorie X</h3>
-        <p>
-          Theorie lernen. Besser verstehen. Moderne Funktionen, KI-Erklärungen und klare Themenstruktur für deinen Erfolg.
-        </p>
+        <p>Theorie lernen. Besser verstehen. Moderne Funktionen, KI-Erklärungen und klare Themenstruktur für deinen Erfolg.</p>
       </div>
 
       <a class="btn btn-red" href="mailto:sven-gutknecht@gmx.de?subject=Theorie-X-Code%20anfragen">
@@ -426,10 +448,14 @@
       <div>
         <p><strong>E-Mail:</strong></p>
         <p><a href="mailto:sven-gutknecht@gmx.de">sven-gutknecht@gmx.de</a></p>
+
         <br>
+
         <p><strong>TikTok:</strong></p>
         <p><a href="https://www.tiktok.com/@fahrlehrerklartext" target="_blank">tiktok.com/@fahrlehrerklartext</a></p>
+
         <br>
+
         <p><strong>YouTube:</strong></p>
         <p><a href="https://www.youtube.com/@Fahrlehrerklartext" target="_blank">youtube.com/@Fahrlehrerklartext</a></p>
       </div>
@@ -437,19 +463,25 @@
       <div id="impressum">
         <h2>Impressum</h2>
         <p><strong>Angaben gemäß § 5 TMG</strong></p>
+
         <br>
+
         <p>
           Sven Gutknecht<br>
           Grasmoorkamp 11<br>
           29633 Munster<br>
           Deutschland
         </p>
+
         <br>
+
         <p>
           E-Mail:
           <a href="mailto:sven-gutknecht@gmx.de">sven-gutknecht@gmx.de</a>
         </p>
+
         <br>
+
         <p>
           Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
           Sven Gutknecht<br>
