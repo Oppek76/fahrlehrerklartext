@@ -1,14 +1,357 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Fahrlehrer Klartext</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahrlehrer Klartext</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111111;
+      border-bottom: 2px solid #e50914;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #e50914;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.9)),
+        radial-gradient(circle at top, #2a0000, #0b0b0b 65%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      color: #e50914;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #dddddd;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+
+    .btn-red {
+      background: #e50914;
+      color: #ffffff;
+    }
+
+    .btn-dark {
+      background: #222222;
+      color: #ffffff;
+      border: 1px solid #444444;
+    }
+
+    .btn:hover {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: #ffffff;
+      border-left: 6px solid #e50914;
+      padding-left: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 26px;
+      border-radius: 14px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .card h3 {
+      color: #e50914;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #d8d8d8;
+    }
+
+    .highlight {
+      background: #e50914;
+      color: white;
+      padding: 45px 25px;
+      border-radius: 18px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .highlight h3 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .contact a {
+      color: #e50914;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #050505;
+      padding: 40px 20px;
+      text-align: center;
+      color: #aaaaaa;
+      border-top: 1px solid #222222;
+    }
+
+    .impressum {
+      font-size: 14px;
+      color: #cccccc;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        display: block;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Fahrlehrer Klartext</h1>
+<header>
+  <div class="nav">
+    <div class="logo">Fahrlehrer <span>Klartext</span></div>
+    <nav>
+      <a href="#start">Start</a>
+      <a href="#ueber">Über mich</a>
+      <a href="#content">Content</a>
+      <a href="#theoriex">Theorie X</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#impressum">Impressum</a>
+    </nav>
+  </div>
+</header>
 
-<p>Die Homepage wird gerade erstellt.</p>
+<main>
+
+  <section class="hero" id="start">
+    <div class="hero-content">
+      <h1>Fahrlehrer <span>Klartext</span></h1>
+      <p>Direkte Fahrlehrer-Erklärungen. Ohne Gelaber. Für alle, die besser fahren, sicherer werden und die Prüfung verstehen wollen.</p>
+
+      <div class="buttons">
+        <a class="btn btn-red" href="https://www.tiktok.com/@fahrlehrerklartext" target="_blank">TikTok ansehen</a>
+        <a class="btn btn-dark" href="https://www.youtube.com/@Fahrlehrerklartext" target="_blank">YouTube ansehen</a>
+        <a class="btn btn-red" href="#theoriex">Theorie X</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <h2>Über Fahrlehrer Klartext</h2>
+    <div class="card">
+      <p>
+        Ich bin Sven Gutknecht, Fahrlehrer aus Munster. Auf meinen Kanälen erkläre ich Fahrschul-Themen so, wie sie wirklich verstanden werden müssen:
+        klar, direkt und praxisnah.
+      </p>
+      <br>
+      <p>
+        Es geht um Sitzposition, Lenkradhaltung, Blickführung, Schulterblick, Vorfahrt, Verkehrszeichen, Prüfungsfehler und alles, was Fahrschüler wirklich weiterbringt.
+      </p>
+    </div>
+  </section>
+
+  <section id="content">
+    <h2>Was du hier bekommst</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Fahrpraxis einfach erklärt</h3>
+        <p>Kurze, verständliche Erklärungen zu typischen Problemen aus der Fahrschule.</p>
+      </div>
+
+      <div class="card">
+        <h3>Prüfungsfehler vermeiden</h3>
+        <p>Ich zeige dir, woran Fahrschüler wirklich scheitern und wie du diese Fehler vermeidest.</p>
+      </div>
+
+      <div class="card">
+        <h3>Verkehrszeichen verstehen</h3>
+        <p>Keine trockene Theorie, sondern klare Beispiele aus der Praxis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Blickführung & Sicherheit</h3>
+        <p>Warum du dahin fährst, wo du hinschaust – und wie du deine Spur sauber hältst.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="theoriex">
+    <h2>Theorie X</h2>
+    <div class="highlight">
+      <h3>Theorie lernen. Besser verstehen.</h3>
+      <p>
+        Theorie X unterstützt Fahrschüler beim Lernen mit modernen Funktionen, KI-Erklärungen und klarer Themenstruktur.
+      </p>
+      <br>
+      <a class="btn btn-dark" href="mailto:sven-gutknecht@gmx.de?subject=Theorie%20X%20Anfrage">Theorie-X-Code anfragen</a>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <h2>Kontakt</h2>
+    <div class="card">
+      <p>Für Kooperationen, Anfragen oder Kontakt:</p>
+      <br>
+      <p>
+        E-Mail:
+        <a href="mailto:sven-gutknecht@gmx.de">sven-gutknecht@gmx.de</a>
+      </p>
+      <p>
+        TikTok:
+        <a href="https://www.tiktok.com/@fahrlehrerklartext" target="_blank">@fahrlehrerklartext</a>
+      </p>
+      <p>
+        YouTube:
+        <a href="https://www.youtube.com/@Fahrlehrerklartext" target="_blank">@Fahrlehrerklartext</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <div class="card impressum">
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <br>
+      <p>
+        Sven Gutknecht<br>
+        Grasmoorkamp 11<br>
+        29633 Munster<br>
+        Deutschland
+      </p>
+      <br>
+      <p>
+        E-Mail: <a href="mailto:sven-gutknecht@gmx.de">sven-gutknecht@gmx.de</a>
+      </p>
+      <br>
+      <p>
+        Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
+        Sven Gutknecht<br>
+        Grasmoorkamp 11<br>
+        29633 Munster
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Fahrlehrer Klartext – Sven Gutknecht</p>
+</footer>
 
 </body>
 </html>
